@@ -89,14 +89,10 @@ export const CalendarModal = () => {
         }
 
         if( formValues.title.length <= 0) return;
-        
-        console.log(formValues);
-
-        
+                        
         await startSavingEvent( formValues );
         closeDateModal();
-        // Remover errores en pantalla
-        // cerrar modal
+        setFormSubmitted(false);
 
     }
 
