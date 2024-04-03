@@ -40,10 +40,11 @@ export const calendarSlice = createSlice({
             });
         },
         onDeleteEvent: (state) => {
-            if( state.activeEvent ) {
+            
+            if( state.activeEvent ) {                
                 state.events = state.events.filter( event => event.id !== state.activeEvent.id );
                 state.activeEvent = null;
-            }
+            }            
         },
         onLoadEvents: (state, { payload = [] }) => {
             state.isLoadingEvents = false;

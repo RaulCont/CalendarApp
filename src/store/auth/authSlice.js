@@ -17,6 +17,8 @@ export const authSlice = createSlice({
             // console.log(payload);
             state.user.name = payload.name;
             state.user.uid = payload.uid;
+            state.user.email = payload.email;
+            state.user.password = payload.password;
             state.errorMessage = undefined;
         },
         onLogout: ( state, { payload } ) => {
